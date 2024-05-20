@@ -1,0 +1,850 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:新細明體;
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:細明體;
+	panose-1:2 2 5 9 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+@font-face
+	{font-family:"\@細明體";
+	panose-1:2 1 6 9 0 1 1 1 1 1;}
+@font-face
+	{font-family:"\@新細明體";
+	panose-1:2 1 6 1 0 1 1 1 1 1;}
+@font-face
+	{font-family:"\@DengXian";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Times New Roman",serif;}
+pre
+	{mso-style-link:"HTML 預設格式 字元";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:細明體;}
+span.HTML
+	{mso-style-name:"HTML 預設格式 字元";
+	mso-style-link:"HTML 預設格式";
+	font-family:細明體;}
+span.gnvwddmde4b
+	{mso-style-name:gnvwddmde4b;}
+span.gnvwddmdd3b
+	{mso-style-name:gnvwddmdd3b;}
+span.gnvwddmdn3b
+	{mso-style-name:gnvwddmdn3b;}
+.MsoChpDefault
+	{font-size:11.0pt;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-TW style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:16.0pt;line-height:107%'>Exploring
+Trends in Global Temperature</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Name(English):</span><span lang=EN-US> Elida</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Objective</span></p>
+
+<p class=MsoNormal><span lang=EN-US>This project aims to analyze and visualize
+trends in global temperature over the past century using historical temperature
+data.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Data Source</span></p>
+
+<p class=MsoNormal><span lang=EN-US>You can use the &quot;nycflights13&quot;
+package in R, which includes a dataset called &quot;weather&quot; containing
+historical weather data from New York City airports.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Steps</span></p>
+
+<p class=MsoNormal><span lang=EN-US>1. Data Exploration: Load the necessary
+libraries and explore the &quot;weather&quot; dataset to understand its
+structure and variables. Identify the variables related to temperature and
+extract the relevant data.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Command</span></p>
+
+<p class=MsoNormal><span lang=EN-US>library(nycflights13)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>library(dplyr)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>library(ggplot2)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>library(tidyverse)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Output</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=636
+ style='width:476.9pt;background:white'>
+ <tr>
+  <td valign=top style='padding:0cm 0cm 6.0pt 4.5pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:10.0pt;color:black'>&gt; library(nycflights13)</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:10.0pt;color:black'>&gt; library(dplyr)</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:10.0pt;color:black'>&gt; library(ggplot2)</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:10.0pt;color:black'>&gt; library(tidyverse)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 0cm 6.0pt 4.5pt'></td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 0cm 6.0pt 4.5pt'>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=630
+   style='width:472.4pt'>
+   <tr>
+    <td width=1 valign=top style='width:.75pt;padding:0cm 0cm 0cm 0cm'>
+    <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'><span
+    lang=EN-US style='font-size:10.0pt'>&gt; </span></p>
+    </td>
+   </tr>
+  </table>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US>Explain the command</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Import usage package</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Explain the output</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Show usage kit</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Command</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;line-height:107%'>weather</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Output</span></p>
+
+<pre style='background:white;word-break:break-all'><span class=gnvwddmde4b><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:blue'>&gt; </span></span></span><span
+class=gnvwddmdd3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:blue'>weather</span></span></pre><pre style='background:white;word-break:
+break-all'><span class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;
+font-family:"Lucida Console";color:#949494'><span style='outline: none;
+user-select: text;white-space:pre-wrap !important'># A tibble: 26,115 × 15</span></span><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span></pre><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:black'>   origin  year month   day  hour  temp  dewp humid</span></span></pre><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:black'>   </span></span><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><i><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:#949494'>&lt;chr&gt;</span></span></i><span style='outline: none;
+user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'>  </span></span><span class=gnvwddmdn3b></span><i><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'>&lt;int&gt;</span></span></i><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'> </span></span><span class=gnvwddmdn3b></span><i><span lang=EN-US
+style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'>&lt;int&gt;</span></span></i><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'> </span></span><span class=gnvwddmdn3b></span><i><span lang=EN-US
+style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'>&lt;int&gt;</span></span></i><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'> </span></span><span class=gnvwddmdn3b></span><i><span lang=EN-US
+style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'>&lt;int&gt;</span></span></i><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'> </span></span><span class=gnvwddmdn3b></span><i><span lang=EN-US
+style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'>&lt;dbl&gt;</span></span></i><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'> </span></span><span class=gnvwddmdn3b></span><i><span lang=EN-US
+style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'>&lt;dbl&gt;</span></span></i><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'> </span></span><span class=gnvwddmdn3b></span><i><span lang=EN-US
+style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'>&lt;dbl&gt;</span></span></i><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span></pre><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b></span><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#BCBCBC'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'> 1</span></span><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'> EWR     </span><u><span style='outline: none;user-select: text;
+white-space:pre-wrap !important'>2</span></u><span style='outline: none;
+user-select: text;white-space:pre-wrap !important'>013     1     1     1  39.0  26.1  59.4</span></span></pre></span><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#BCBCBC'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'> 2</span></span><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'> EWR     </span><u><span style='outline: none;user-select: text;
+white-space:pre-wrap !important'>2</span></u><span style='outline: none;
+user-select: text;white-space:pre-wrap !important'>013     1     1     2  39.0  27.0  61.6</span></span></pre></span><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#BCBCBC'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'> 3</span></span><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'> EWR     </span><u><span style='outline: none;user-select: text;
+white-space:pre-wrap !important'>2</span></u><span style='outline: none;
+user-select: text;white-space:pre-wrap !important'>013     1     1     3  39.0  28.0  64.4</span></span></pre></span><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#BCBCBC'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'> 4</span></span><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'> EWR     </span><u><span style='outline: none;user-select: text;
+white-space:pre-wrap !important'>2</span></u><span style='outline: none;
+user-select: text;white-space:pre-wrap !important'>013     1     1     4  39.9  28.0  62.2</span></span></pre></span><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#BCBCBC'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'> 5</span></span><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'> EWR     </span><u><span style='outline: none;user-select: text;
+white-space:pre-wrap !important'>2</span></u><span style='outline: none;
+user-select: text;white-space:pre-wrap !important'>013     1     1     5  39.0  28.0  64.4</span></span></pre></span><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#BCBCBC'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'> 6</span></span><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'> EWR     </span><u><span style='outline: none;user-select: text;
+white-space:pre-wrap !important'>2</span></u><span style='outline: none;
+user-select: text;white-space:pre-wrap !important'>013     1     1     6  37.9  28.0  67.2</span></span></pre></span><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#BCBCBC'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'> 7</span></span><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'> EWR     </span><u><span style='outline: none;user-select: text;
+white-space:pre-wrap !important'>2</span></u><span style='outline: none;
+user-select: text;white-space:pre-wrap !important'>013     1     1     7  39.0  28.0  64.4</span></span></pre></span><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#BCBCBC'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'> 8</span></span><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'> EWR     </span><u><span style='outline: none;user-select: text;
+white-space:pre-wrap !important'>2</span></u><span style='outline: none;
+user-select: text;white-space:pre-wrap !important'>013     1     1     8  39.9  28.0  62.2</span></span></pre></span><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#BCBCBC'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'> 9</span></span><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'> EWR     </span><u><span style='outline: none;user-select: text;
+white-space:pre-wrap !important'>2</span></u><span style='outline: none;
+user-select: text;white-space:pre-wrap !important'>013     1     1     9  39.9  28.0  62.2</span></span></pre></span><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#BCBCBC'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'>10</span></span><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+color:black'> EWR     </span><u><span style='outline: none;user-select: text;
+white-space:pre-wrap !important'>2</span></u><span style='outline: none;
+user-select: text;white-space:pre-wrap !important'>013     1     1    10  41    28.0  59.6</span></span></pre></span><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'># </span></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Times New Roman",serif;
+color:#949494'>ℹ</span></span><span class=gnvwddmdn3b><span lang=EN-US
+style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'> 26,105 more rows</span></span><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span></pre><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b></span><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'># </span></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Times New Roman",serif;
+color:#949494'>ℹ</span></span><span class=gnvwddmdn3b><span lang=EN-US
+style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'> 7 more variables: wind_dir &lt;dbl&gt;,</span></span><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span></pre><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b></span><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'>#   wind_speed &lt;dbl&gt;, wind_gust &lt;dbl&gt;, precip &lt;dbl&gt;,</span></span><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span></pre><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b></span><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'>#   pressure &lt;dbl&gt;, visib &lt;dbl&gt;, time_hour &lt;dttm&gt;</span></span><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'></span></pre><pre
+style='background:white;word-break:break-all'><span class=gnvwddmdn3b></span><span
+lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'><span
+style='outline: none;user-select: text;white-space:pre-wrap !important'># </span></span><span
+class=gnvwddmdn3b><span lang=EN-US style='font-size:14.0pt;font-family:"Times New Roman",serif;
+color:#949494'>ℹ</span></span><span class=gnvwddmdn3b><span lang=EN-US
+style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'> Use `print(n = ...)` to see more rows</span></span></span></span></pre>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Explain the command</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Specify data.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Explain the output</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Display data.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Command</span></p>
+
+<p class=MsoNormal><span lang=EN-US>str(weather)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Output</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=636
+ style='width:476.9pt;background:white'>
+ <tr>
+  <td valign=top style='padding:0cm 0cm 6.0pt 4.5pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:blue'>&gt; str(weather)</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>tibble [26,115 × 15] (S3: tbl_df/tbl/data.frame)</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'> $ origin    : chr [1:26115] &quot;EWR&quot; &quot;EWR&quot;
+  &quot;EWR&quot; &quot;EWR&quot; ...</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'> $ year      : int [1:26115] 2013 2013 2013 2013 2013 2013 2013
+  2013 2013 2013 ...</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'> $ month     : int [1:26115] 1 1 1 1 1 1 1 1 1 1 ...</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'> $ day       : int [1:26115] 1 1 1 1 1 1 1 1 1 1 ...</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'> $ hour      : int [1:26115] 1 2 3 4 5 6 7 8 9 10 ...</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'> $ temp      : num [1:26115] 39 39 39 39.9 39 ...</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'> $ dewp      : num [1:26115] 26.1 27 28 28 28 ...</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'> $ humid     : num [1:26115] 59.4 61.6 64.4 62.2 64.4 ...</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'> $ wind_dir  : num [1:26115] 270 250 240 250 260 240 240 250 260
+  260 ...</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'> $ wind_speed: num [1:26115] 10.36 8.06 11.51 12.66 12.66 ...</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'> $ wind_gust : num [1:26115] NA NA NA NA NA NA NA NA NA NA ...</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'> $ precip    : num [1:26115] 0 0 0 0 0 0 0 0 0 0 ...</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'> $ pressure  : num [1:26115] 1012 1012 1012 1012 1012 ...</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'> $ visib     : num [1:26115] 10 10 10 10 10 10 10 10 10 10 ...</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'> $ time_hour : POSIXct[1:26115], format:  ...</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 0cm 6.0pt 4.5pt'></td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 0cm 6.0pt 4.5pt'>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=630
+   style='width:472.4pt'>
+   <tr>
+    <td width=1 valign=top style='width:.75pt;padding:0cm 0cm 0cm 0cm'>
+    <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'><span
+    lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:blue'>&gt;
+    </span></p>
+    </td>
+   </tr>
+  </table>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Explain the command</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>To show the structure
+of the data, we used str command</span></span><span lang=EN-US
+style='color:black'>.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Explain the output</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>The weather data has
+26,115 rows and 15 columns. The wind_gust column has a lot of missing values.</span></span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>2. Data Cleaning: Clean the data by
+handling missing values, outliers, and any inconsistencies in the dataset that
+may affect the analysis.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Command</span></p>
+
+<p class=MsoNormal><span lang=EN-US>missing_values &lt;-
+colSums(is.na(weather))</span></p>
+
+<p class=MsoNormal><span lang=EN-US>missing_values_df &lt;- data.frame(variable
+= names(missing_values), missing_count = missing_values)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>print(missing_values_df)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Output</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=636
+ style='width:476.9pt;background:white'>
+ <tr>
+  <td valign=top style='padding:0cm 0cm 6.0pt 4.5pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:blue'>&gt; missing_values &lt;- colSums(is.na(weather))</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:blue'>&gt; missing_values_df &lt;- data.frame(variable =
+  names(missing_values), missing_count = missing_values)</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:blue'>&gt; print(missing_values_df)</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>             variable missing_count</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>origin         origin             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>year             year             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>month           month             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>day               day             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>hour             hour             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>temp             temp             1</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>dewp             dewp             1</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>humid           humid             1</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>wind_dir     wind_dir           460</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>wind_speed wind_speed             4</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>wind_gust   wind_gust         20778</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>precip         precip             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>pressure     pressure          2729</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>visib           visib             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>time_hour   time_hour             0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 0cm 6.0pt 4.5pt'></td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 0cm 6.0pt 4.5pt'>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=630
+   style='width:472.4pt'>
+   <tr>
+    <td width=1 valign=top style='width:.75pt;padding:0cm 0cm 0cm 0cm'>
+    <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'><span
+    lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:blue'>&gt;
+    </span></p>
+    </td>
+   </tr>
+  </table>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US>Explain the command</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Counts the number of missing values ​​in
+each column and displays the number of missing values ​​in each column.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Explain the output</span></p>
+
+<p class=MsoNormal><span lang=EN-US>We can clearly find how many missing values
+​​are in each column in the weather data.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Command</span></p>
+
+<p class=MsoNormal><span lang=EN-US>weather_filled &lt;- weather %&gt;%</span></p>
+
+<p class=MsoNormal><span lang=EN-US>  mutate(across(where(is.numeric),
+~ifelse(is.na(.), mean(., na.rm = TRUE), .)))</span></p>
+
+<p class=MsoNormal><span lang=EN-US>missing_values &lt;-
+colSums(is.na(weather_filled))</span></p>
+
+<p class=MsoNormal><span lang=EN-US>missing_values_df &lt;- data.frame(variable
+= names(missing_values), missing_count = missing_values)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>print(missing_values_df)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>print(head(weather_filled))</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Output</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=636
+ style='width:476.9pt;background:white'>
+ <tr>
+  <td valign=top style='padding:0cm 0cm 6.0pt 4.5pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:blue'>&gt; weather_filled &lt;- weather %&gt;%</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:blue'>+   mutate(across(where(is.numeric), ~ifelse(is.na(.), mean(.,
+  na.rm = TRUE), .)))</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:blue'>&gt; missing_values &lt;- colSums(is.na(weather_filled))</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:blue'>&gt; missing_values_df &lt;- data.frame(variable =
+  names(missing_values), missing_count = missing_values)</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:blue'>&gt; print(missing_values_df)</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>             variable missing_count</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>origin         origin             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>year             year             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>month           month             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>day               day             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>hour             hour             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>temp             temp             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>dewp             dewp             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>humid           humid             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>wind_dir     wind_dir             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>wind_speed wind_speed             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>wind_gust   wind_gust             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>precip         precip             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>pressure     pressure             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>visib           visib             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>time_hour   time_hour             0</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:blue'>&gt; print(head(weather_filled))</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:#949494'># A tibble: 6 × 15</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>  origin  year month   day  hour  temp  dewp humid</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:black'>  </span><i><span lang=EN-US style='font-size:14.0pt;font-family:
+  "Lucida Console";color:#949494'>&lt;chr&gt;</span></i><span lang=EN-US
+  style='font-size:14.0pt;font-family:"Lucida Console";color:black'>  </span><i><span
+  lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'>&lt;int&gt;</span></i><span
+  lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:black'>
+  </span><i><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:#949494'>&lt;int&gt;</span></i><span lang=EN-US style='font-size:14.0pt;
+  font-family:"Lucida Console";color:black'> </span><i><span lang=EN-US
+  style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'>&lt;int&gt;</span></i><span
+  lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:black'>
+  </span><i><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:#949494'>&lt;int&gt;</span></i><span lang=EN-US style='font-size:14.0pt;
+  font-family:"Lucida Console";color:black'> </span><i><span lang=EN-US
+  style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'>&lt;dbl&gt;</span></i><span
+  lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:black'>
+  </span><i><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:#949494'>&lt;dbl&gt;</span></i><span lang=EN-US style='font-size:14.0pt;
+  font-family:"Lucida Console";color:black'> </span><i><span lang=EN-US
+  style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'>&lt;dbl&gt;</span></i></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:#BCBCBC'>1</span><span lang=EN-US style='font-size:14.0pt;font-family:
+  "Lucida Console";color:black'> EWR     <u>2</u>013     1     1     1  39.0 
+  26.1  59.4</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:#BCBCBC'>2</span><span lang=EN-US style='font-size:14.0pt;font-family:
+  "Lucida Console";color:black'> EWR     <u>2</u>013     1     1     2  39.0 
+  27.0  61.6</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:#BCBCBC'>3</span><span lang=EN-US style='font-size:14.0pt;font-family:
+  "Lucida Console";color:black'> EWR     <u>2</u>013     1     1     3  39.0 
+  28.0  64.4</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:#BCBCBC'>4</span><span lang=EN-US style='font-size:14.0pt;font-family:
+  "Lucida Console";color:black'> EWR     <u>2</u>013     1     1     4  39.9 
+  28.0  62.2</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:#BCBCBC'>5</span><span lang=EN-US style='font-size:14.0pt;font-family:
+  "Lucida Console";color:black'> EWR     <u>2</u>013     1     1     5  39.0 
+  28.0  64.4</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:#BCBCBC'>6</span><span lang=EN-US style='font-size:14.0pt;font-family:
+  "Lucida Console";color:black'> EWR     <u>2</u>013     1     1     6  37.9 
+  28.0  67.2</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:#949494'># </span><span lang=EN-US style='font-size:14.0pt;color:#949494'>ℹ</span><span
+  lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:#949494'>
+  7 more variables: wind_dir &lt;dbl&gt;,</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:#949494'>#   wind_speed &lt;dbl&gt;, wind_gust &lt;dbl&gt;, precip
+  &lt;dbl&gt;,</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal;word-break:
+  break-all'><span lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";
+  color:#949494'>#   pressure &lt;dbl&gt;, visib &lt;dbl&gt;, time_hour
+  &lt;dttm&gt;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 0cm 6.0pt 4.5pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'><span
+  lang=EN-US style='font-size:10.0pt;font-family:"Lucida Console";color:black'> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 0cm 6.0pt 4.5pt'>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=630
+   style='width:472.4pt'>
+   <tr>
+    <td width=1 valign=top style='width:.75pt;padding:0cm 0cm 0cm 0cm'>
+    <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'><span
+    lang=EN-US style='font-size:14.0pt;font-family:"Lucida Console";color:blue'>&gt;
+    </span></p>
+    </td>
+   </tr>
+  </table>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US>Explain the command</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Use the mean to fill in the missing values,
+then re-count the missing values ​​and tabulate them, and display the new data.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Explain the output</span></p>
+
+<p class=MsoNormal><span lang=EN-US>We can find from the list that after
+filling in the values, and then re-counting the missing values, the columns
+that originally had missing values ​​all become 0. Then display the new data
+again.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>3. Data Analysis: Calculate summary
+statistics for the temperature variables (e.g., mean, median, standard
+deviation) and visualize the distribution of temperatures over time using line
+plots.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Command</span></p>
+
+<p class=MsoNormal><span lang=EN-US>selected_origins &lt;- c(&quot;JFK&quot;,
+&quot;LGA&quot;, &quot;EWR&quot;)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>selected_weather &lt;- weather_filled
+%&gt;%</span></p>
+
+<p class=MsoNormal><span lang=EN-US>  filter(origin %in% selected_origins)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>ggplot(selected_weather, aes(x = time_hour,
+y = temp, color = origin)) +</span></p>
+
+<p class=MsoNormal><span lang=EN-US>  geom_line() +</span></p>
+
+<p class=MsoNormal><span lang=EN-US>  labs(x = &quot;Time&quot;, y =
+&quot;Temperature (F)&quot;, color = &quot;Origin&quot;) +</span></p>
+
+<p class=MsoNormal><span lang=EN-US>  ggtitle(&quot;Temperature Trends for
+Selected Origins&quot;) +</span></p>
+
+<p class=MsoNormal><span lang=EN-US>  theme_minimal()</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Output</span></p>
+
+<p class=MsoNormal><span lang=EN-US><img width=602 height=508
+src="index.files/image001.png" alt="一張含有 文字, 螢幕擷取畫面, 繪圖, 圖表 的圖片&#10;&#10;自動產生的描述"></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Explain the command</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Analyze the three areas that appear in the
+data and use ggplot2 to draw a line chart of temperature changes over time.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Explain the output</span></p>
+
+<p class=MsoNormal><span lang=EN-US>The figure below is a line chart of the
+average temperature of each airport. It can be found that the temperature
+changes at the three airports are roughly the same. The temperature is cooler
+in February and the temperature is higher in July and August.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>4. Trend Analysis: Use statistical
+techniques (e.g., linear regression) to analyze trends in global temperature
+over the years. Create a regression model to predict future temperature trends
+based on historical data.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Command</span></p>
+
+<p class=MsoNormal><span lang=EN-US>ggplot(weather_filled, aes(x = visib, y =
+temp)) +</span></p>
+
+<p class=MsoNormal><span lang=EN-US>  geom_point(alpha = 0.5) +</span></p>
+
+<p class=MsoNormal><span lang=EN-US>  geom_smooth(method = &quot;lm&quot;,
+formula = y ~ x, col = &quot;red&quot;) +</span></p>
+
+<p class=MsoNormal><span lang=EN-US>  labs(title = &quot;Correlation between
+Visibility and Temperature&quot;,</span></p>
+
+<p class=MsoNormal><span lang=EN-US>       x = &quot;Visibility (miles)&quot;,</span></p>
+
+<p class=MsoNormal><span lang=EN-US>       y = &quot;Temperature (F)&quot;) +</span></p>
+
+<p class=MsoNormal><span lang=EN-US>  theme_minimal()</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Output</span></p>
+
+<p class=MsoNormal><span lang=EN-US><img width=602 height=509 id="圖片 1"
+src="index.files/image002.png"></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Explain the command</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Use ggplot2 to create the relationship
+between visibility and temperature, and display the results with a scatter
+plot. At the same time, a linear regression line is added to the graph. The
+X-axis is set to visibility and the y-axis is set to temperature.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Explain the output</span></p>
+
+<p class=MsoNormal><span lang=EN-US>From the linear regression line of the
+chart, we can find the trend that the lower the visibility, the lower the
+temperature, and the higher the visibility, the higher the temperature.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>5. Insights and Interpretation: Provide
+insights and interpretations based on the data analysis and visualizations.
+Discuss any observed trends, patterns, or anomalies in global temperature
+trends.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
